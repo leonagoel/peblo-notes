@@ -1,0 +1,134 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--void);
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.orb-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(124,90,247,0.25), transparent 70%);
+  top: -150px; left: -100px;
+}
+.orb-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(26,212,160,0.12), transparent 70%);
+  bottom: -100px; right: -80px;
+}
+
+.orbit-system {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.orbit-ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(124,90,247,0.3);
+  border-radius: 50%;
+}
+
+.login-card {
+  background: var(--surface);
+  border: 1px solid var(--rim2);
+  border-radius: var(--r-xl);
+  padding: 40px;
+  width: 420px;
+  max-width: calc(100vw - 32px);
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(20px);
+}
+
+.login-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.login-logo-mark {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--violet), #a68eff);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.login-logo-mark span {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1px;
+}
+.login-logo-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+.login-logo-tagline {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+  margin-top: 1px;
+}
+
+.auth-tab {
+  display: flex;
+  background: var(--deep);
+  border: 1px solid var(--rim);
+  border-radius: var(--r-md);
+  padding: 4px;
+  margin-bottom: 24px;
+  gap: 4px;
+}
+.auth-tab-btn {
+  flex: 1;
+  padding: 9px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.auth-tab-btn.active {
+  background: var(--elevated);
+  color: var(--text);
+  border: 1px solid var(--rim2);
+}
+
+.form-group {
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.form-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.login-hint {
+  text-align: center;
+  font-size: 11.5px;
+  color: var(--faint);
+  margin-top: 18px;
+}
